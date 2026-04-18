@@ -1,0 +1,37 @@
+{
+  "name": "@rabbitai/agent-browser-agent",
+  "version": "1.0.0",
+  "description": "Agent Browser Agent for RabbitAI - standalone server that receives browser commands via Socket.IO and executes them",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "bin": {
+    "agent-browser-agent": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts src/cli.ts --format cjs,esm --dts --watch",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "rabbitai",
+    "agent-browser",
+    "browser-automation",
+    "agent"
+  ],
+  "license": "MIT"
+}
